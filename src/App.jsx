@@ -149,9 +149,14 @@ function App() {
             <h3 className="text-xl font-semibold">Centene Corporation – Full Stack Developer</h3>
             <p className="text-sm text-gray-300">Jan 2025 – Present | Irving, TX</p>
             <ul className="list-disc list-inside text-gray-200">
-              <li>Developed HIPAA-compliant Spring Boot microservices with OAuth2, JWT, and mTLS for secure claims and EHR integrations.</li>
-              <li>Integrated Kafka and Redis for real-time eligibility validation, and exposed REST APIs for ML model inference in risk workflows.</li>
-              <li>Automated CI/CD using GitHub Actions and Jenkins with container signing, SonarQube checks, and secure EKS deployments via Helm/Terraform.</li>
+            <li>Developed React and Angular portals for healthcare claim intake and eligibility validation.
+.</li>
+<li>Built backend microservices using Java Spring Boot with Spring Data JPA for secure and efficient claims processing.
+</li>
+<li>Documented and tested REST APIs with Swagger UI, cutting onboarding time for developers by 50%.
+.</li>
+<li>Implemented Spring Batch jobs and integrated CSRF with JWT authentication to improve automation and security.</li>
+
             </ul>
           </div>
 
@@ -160,9 +165,11 @@ function App() {
             <h3 className="text-xl font-semibold">Wells Fargo – Java Developer</h3>
             <p className="text-sm text-gray-300">Aug 2021 – July 2023 | Pune, India</p>
             <ul className="list-disc list-inside text-gray-200">
-              <li>Built secure APIs and batch jobs for payroll and sub-ledger reconciliation using Spring Boot, Kafka, and PostgreSQL.</li>
-              <li>Created ML-ready financial datasets and optimized SQL for anomaly detection models.</li>
-             <li>Automated pipelines with Jenkins, SonarQube, and Nexus; led backend integration for audit-ready reporting modules.</li>
+              <li>Ensured seamless frontend-backend integration in a microservices architecture, optimizing response time by 30%.</li>
+              <li>Leveraged Spring Data JPA with Hibernate to interact with Oracle DB, improving query performance by 40%.</li>
+              <li>Utilized Kafka for message publishing and consumption within a microservices architecture, enabling inter-service communication.</li>
+              <li>Automated payroll and reconciliation workflows using Spring Batch jobs, reducing manual intervention and improving reliability.</li>
+
             </ul>
           </div>
 
@@ -171,9 +178,9 @@ function App() {
             <h3 className="text-xl font-semibold">T-Mobile – Java Developer</h3>
             <p className="text-sm text-gray-300">Dec 2020 – July 2021 | Hyderabad, India</p>
             <ul className="list-disc list-inside text-gray-200">
-              <li>Developed Angular dashboards and integrated secure REST APIs for NEFT/RTGS/IMPS transaction modules.</li>
-              <li>Implemented JWT-based authentication, responsive UI components, and role-based dashboards.</li>
-              <li>Shadowed backend team and contributed to debugging Node.js APIs and improving real-time frontend/backend sync.</li>
+              <li>Built React and Angular dashboards for operations teams to monitor and approve fund transfer transactions.</li>
+              <li>Developed Spring Boot APIs for payment initiation, settlement, and reconciliation workflows.</li>
+              <li>Automated reconciliation tasks using Cron jobs on GCP Cloud Functions, reducing manual effort by 80%.</li>
             </ul>
           </div>
 
@@ -182,9 +189,9 @@ function App() {
             <h3 className="text-xl font-semibold">ECIL – Junior Engineer</h3>
             <p className="text-sm text-gray-300">May 2017 – Nov 2017 | Hyderabad, India</p>
             <ul className="list-disc list-inside text-gray-200">
-              <li>Worked on Hospital Management System using Java, HTML, and SQL</li>
-              <li>Improved patient data retrieval and appointment scheduling modules</li>
-              <li>Coordinated with cross-functional teams in an agile environment</li>
+              <li>Worked on Appworks, an enterprise content management platform in a Hub-supplier SCM model, enabling intelligent document workflows through Business Process Management (BPM).</li>
+              <li>Worked closely on developing and maintaining REST APIs and executed bug fixes and code enhancements to improve system efficiency and reliability.</li>
+              <li>Developed lightweight REST services using Node.js and Express.js to integrate with enterprise systems and enable data exchange.</li>
             </ul>
           </div>
         </div>

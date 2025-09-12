@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #f9fafb; /* Tailwind's gray-50 */
+  font-family: 'Inter', sans-serif;
+   @apply overflow-x-hidden;
+}
+html {
+  scroll-behavior: smooth;
+}

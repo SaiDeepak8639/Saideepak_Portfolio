@@ -87,7 +87,7 @@ export default function Experience() {
 
             {/* Card */}
             <div
-              className={`w-full md:w-5/12 p-8 rounded-3xl bg-white/10 backdrop-blur-md border border-gray-300 dark:border-gray-700 shadow-2xl transition-transform transform hover:scale-105 ${
+              className={`w-full md:w-5/12 p-8 rounded-3xl bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 shadow-2xl transition-transform transform hover:scale-105 ${
                 i % 2 === 0 ? "ml-12" : "mr-12"
               }`}
             >

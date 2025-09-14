@@ -57,7 +57,7 @@ export default function Experience() {
   return (
     <section
       id="experience"
-      className="relative px-6 md:px-12 py-20 bg-gray-50 dark:bg-gray-900 overflow-hidden"
+      className="relative px-6 md:px-12 py-20 overflow-hidden"
     >
       {/* Title */}
       <div className="max-w-4xl mx-auto text-center mb-16">

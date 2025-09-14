@@ -10,3 +10,8 @@ body {
 html {
   scroll-behavior: smooth;
 }
+html {
+  scroll-behavior: smooth; /* enables smooth scrolling */
+  scroll-padding-top: 80px; /* adjust this to your navbar height */
+}
+

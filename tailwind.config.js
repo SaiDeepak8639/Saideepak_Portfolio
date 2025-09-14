@@ -1,9 +1,7 @@
-/** @type {import('tailwindcss').Config} */
-export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,jsx}",
-  ],
+// tailwind.config.js
+module.exports = {
+  darkMode: "class",
+  content: ["./index.html", "./src/**/*.{js,jsx}"],
   theme: {
     extend: {},
   },
@@ -11,11 +9,22 @@ export default {
 };
 // tailwind.config.js
 module.exports = {
-  darkMode: 'class', // THIS IS IMPORTANT
+  darkMode: 'class',
   content: ["./index.html", "./src/**/*.{js,jsx}"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: [
+          '-apple-system',
+          'BlinkMacSystemFont',
+          '"SF Pro Display"',
+          '"SF Pro Text"',
+          '"Helvetica Neue"',
+          'Arial',
+          'sans-serif'
+        ]
+      }
+    },
   },
   plugins: [],
 }
-

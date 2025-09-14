@@ -1,8 +1,9 @@
 export default function Hero() {
   return (
-<section 
+<section
   id="home"
-  className="flex flex-col md:flex-row items-start justify-between px-10 pb-8 max-w-7xl mx-auto
+  className="flex flex-col md:flex-row items-start justify-between 
+             px-6 md:px-10 pt-4 pb-8 max-w-7xl mx-auto 
              bg-white dark:bg-[#1c1c1e] text-gray-900 dark:text-gray-100 transition-colors"
 >
   {/* Left */}

@@ -5,13 +5,24 @@
 body {
   background-color: #f9fafb; /* Tailwind's gray-50 */
   font-family: 'Inter', sans-serif;
-   @apply overflow-x-hidden;
-}
-html {
-  scroll-behavior: smooth;
-}
-html {
-  scroll-behavior: smooth; /* enables smooth scrolling */
-  scroll-padding-top: 80px; /* adjust this to your navbar height */
+  @apply overflow-x-hidden;
 }
 
+html {
+  scroll-behavior: smooth; /* enables smooth scrolling */
+}
+
+/* Apply offset only to Home */
+#home {
+  scroll-margin-top: 80px; /* adjust to navbar height */
+}
+
+/* No offset for other sections */
+#education,
+#experience,
+#skills,
+#projects,
+#publications,
+#contact {
+  scroll-margin-top: 0;
+}

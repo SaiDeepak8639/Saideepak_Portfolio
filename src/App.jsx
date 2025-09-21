@@ -25,7 +25,7 @@ function App() {
   }, []);
 
   return (
-    <div className="bg-gray-50 dark:bg-gray-900 font-sans scroll-smooth transition-colors duration-300">
+    <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-900 to-blue-900 text-white font-[Poppins]">
       <Navbar />
       <main>
         <Hero />

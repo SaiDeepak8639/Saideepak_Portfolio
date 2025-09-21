@@ -1,67 +1,69 @@
 import React from "react";
 
 export default function Education() {
+  const educationData = [
+    {
+      year: "2024",
+      title: "Masters in Computer Science",
+      institution: "University of Central Missouri",
+      icon: "🎓",
+      color: "from-cyan-400 to-blue-500",
+    },
+    {
+      year: "2021",
+      title: "Bachelor of Engineering in Electronics & Communication",
+      institution: "Chaitanya Bharathi Institute of Technology",
+      icon: "📡",
+      color: "from-purple-400 to-pink-500",
+    },
+    {
+      year: "2017",
+      title: "Diploma in Communication Engineering",
+      institution: "Government Institute of Electronics",
+      icon: "💻",
+      color: "from-pink-400 to-red-500",
+    },
+  ];
+
   return (
     <section
       id="education"
-      className="relative px-6 md:px-12 py-16 bg-gradient-to-r from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800"
+      className="relative px-6 md:px-12 py-24 bg-gradient-to-br from-indigo-950 via-purple-900 to-blue-900 text-white"
     >
       {/* Title */}
-      <div className="max-w-3xl mx-auto text-center mb-12">
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-gray-100">
-           Education
+      <div className="text-center mb-16">
+        <h2 className="text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 text-transparent bg-clip-text">
+          Education
         </h2>
-        <span className="block w-20 h-1 bg-blue-600 mx-auto mt-3 rounded"></span>
+        <p className="mt-3 text-gray-300">
+          My academic journey through technology & engineering
+        </p>
       </div>
 
-      {/* Timeline */}
-      <div className="relative max-w-3xl mx-auto">
-        {/* Vertical line */}
-        <div className="absolute left-6 top-0 h-full w-1 bg-blue-500"></div>
+      {/* Horizontal Timeline */}
+      <div className="relative max-w-6xl mx-auto">
+        {/* Timeline Line */}
+        <div className="absolute top-1/2 left-0 w-full h-1 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 rounded-full"></div>
 
-        {/* Masters */}
-        <div className="relative mb-12 flex items-start" data-aos="fade-right">
-          <div className="w-10 h-10 flex items-center justify-center bg-blue-600 text-white rounded-full shadow-lg">
-            
-          </div>
-          <div className="ml-6 bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md">
-            <h3 className="text-xl md:text-2xl font-semibold text-blue-600">
-              Masters in Computer Science
-            </h3>
-            <p className="text-gray-600 dark:text-gray-300">
-              University of Central Missouri | Dec 2024
-            </p>
-          </div>
-        </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 relative z-10">
+          {educationData.map((edu, index) => (
+            <div key={index} className="flex flex-col items-center text-center relative">
+              {/* Dot */}
+              <div
+                className={`w-16 h-16 flex items-center justify-center rounded-full bg-gradient-to-r ${edu.color} text-black font-bold shadow-lg mb-6`}
+              >
+                <span className="text-2xl">{edu.icon}</span>
+              </div>
 
-        {/* Bachelor */}
-        <div className="relative mb-12 flex items-start" data-aos="fade-left">
-          <div className="w-10 h-10 flex items-center justify-center bg-blue-600 text-white rounded-full shadow-lg">
-            📡
-          </div>
-          <div className="ml-6 bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md">
-            <h3 className="text-xl md:text-2xl font-semibold text-blue-600">
-              Bachelor of Engineering in Electronics and Communication
-            </h3>
-            <p className="text-gray-600 dark:text-gray-300">
-              Osmania University | Apr 2021
-            </p>
-          </div>
-        </div>
-
-        {/* Diploma */}
-        <div className="relative mb-12 flex items-start" data-aos="fade-right">
-          <div className="w-10 h-10 flex items-center justify-center bg-blue-600 text-white rounded-full shadow-lg">
-            💻
-          </div>
-          <div className="ml-6 bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md">
-            <h3 className="text-xl md:text-2xl font-semibold text-blue-600">
-              Diploma in Communication Engineering
-            </h3>
-            <p className="text-gray-600 dark:text-gray-300">
-              Government Institute of Electronics | May 2017
-            </p>
-          </div>
+              {/* Card */}
+              <div className="bg-white/10 backdrop-blur-xl border border-white/20 p-6 rounded-2xl shadow-lg hover:scale-105 transition transform">
+                <h3 className="text-lg md:text-xl font-semibold text-cyan-300">
+                  {edu.title}
+                </h3>
+                <p className="text-gray-300 text-sm">{edu.institution}</p>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>

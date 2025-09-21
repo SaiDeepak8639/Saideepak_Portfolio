@@ -6,10 +6,10 @@ const experience = [
     date: "Jan 2025 – Present",
     location: "Irving, TX",
     points: [
-      "Developed React and Angular portals for healthcare claim intake and eligibility validation.",
-      "Built backend microservices using Java Spring Boot with Spring Data JPA for secure and efficient claims processing.",
-      "Documented and tested REST APIs with Swagger UI, cutting onboarding time for developers.",
-      "Implemented Spring Batch jobs and integrated CSRF with JWT authentication to improve automation and security.",
+      "Built and deployed cloud-based eligibility and claims adjudication portal using Java 17, Spring Boot, React.js, and AWS EKS, ensuring HIPAA and NCQA compliance.",
+"Designed FHIR-compliant APIs and integrated with EHR systems (Epic, Cerner) using OAuth2.0 and JWT, improving interoperability and secure data exchange.",
+"Implemented Kafka event pipelines, AWS Lambda workflows, and Terraform-based infrastructure to handle claims, provider changes, and secure document storage.",
+"Automated CI/CD with GitHub Actions and AWS CodePipeline, integrated monitoring with Prometheus/Grafana, and optimized PostgreSQL data models for high-volume transactions.",
     ],
   },
   {

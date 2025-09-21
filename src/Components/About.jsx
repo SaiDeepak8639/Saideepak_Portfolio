@@ -4,46 +4,63 @@ export default function About() {
   return (
     <section
       id="about"
-      className="relative px-6 md:px-12 py-16 bg-gradient-to-r from-gray-100 via-gray-50 to-gray-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900"
+      className="relative px-6 md:px-12 py-24 bg-gradient-to-br from-indigo-950 via-purple-900 to-blue-900 text-white overflow-hidden"
     >
-      <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+      {/* Background Glow */}
+      <div className="absolute -top-24 -left-24 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl"></div>
+      <div className="absolute -bottom-32 -right-32 w-[28rem] h-[28rem] bg-purple-600/20 rounded-full blur-3xl"></div>
+
+      <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center relative z-10">
         {/* Illustration */}
-        <div data-aos="fade-right" className="flex justify-center">
-         <img 
-  src="/Praneeth_Nagilla_Portfolio/developer-illustration.svg" 
-  alt="Developer Illustration" 
-  className="w-72 md:w-96 drop-shadow-xl"
-/>
-        </div>
-
-        {/* Text Content */}
         <div
-          data-aos="fade-left"
-          className="bg-white dark:bg-gray-800 shadow-xl rounded-2xl p-8"
+          data-aos="fade-right"
+          className="flex justify-center transform hover:scale-105 transition duration-500"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-gray-100 mb-6">
-            About Me
-            <span className="block w-16 h-1 bg-blue-600 mt-2 rounded"></span>
-          </h2>
-
-          <p className="text-lg md:text-xl text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-            I am a <span className="font-bold text-blue-600">Full Stack Developer </span> 
-             passionate about building scalable, secure, and cloud-native applications.
-          </p>
-
-          <p className="text-lg md:text-xl text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-            My experience spans <span className="font-semibold">healthcare</span>, 
-            <span className="font-semibold">finance</span>, and 
-            <span className="font-semibold"> telecom</span> domains, 
-            where I deliver impactful solutions.
-          </p>
-
-          <p className="text-lg md:text-xl text-gray-700 dark:text-gray-300 leading-relaxed">
-            Skilled in <span className="font-bold">Java, Spring Boot, React, Angular, AWS</span>, 
-            and <span className="font-bold">Databases</span>, 
-            I love solving complex problems with clean, elegant solutions.
-          </p>
+          <img
+            src="/Praneeth_Nagilla_Portfolio/developer-illustration.svg"
+            alt="Developer Illustration"
+            className="w-72 md:w-[26rem] drop-shadow-[0_0_25px_rgba(56,189,248,0.7)] animate-float"
+          />
         </div>
+
+     {/* Text Content */}
+<div
+  data-aos="fade-left"
+  className="backdrop-blur-xl bg-white/10 border border-cyan-400/30 shadow-2xl rounded-3xl p-10"
+>
+  <h2 className="text-4xl md:text-5xl font-extrabold text-cyan-300 mb-6">
+    About Me
+    <span className="block w-20 h-1 bg-gradient-to-r from-cyan-400 to-purple-400 mt-3 rounded-full animate-pulse"></span>
+  </h2>
+
+  {/* Professional Summary */}
+  <p className="text-lg md:text-xl text-gray-200 leading-relaxed mb-6">
+    Full Stack Developer with <span className="font-semibold text-cyan-300">6 years of experience</span> 
+    delivering secure and scalable applications across 
+    <span className="text-pink-400"> healthcare</span> and 
+    <span className="text-purple-400"> banking</span> domains. Skilled in 
+    <span className="font-semibold text-cyan-300"> Java (11–17), Spring Boot, React, Angular</span>, 
+    with expertise in <span className="text-cyan-300">AWS, Azure, Docker, Kubernetes</span>, 
+    and <span className="text-cyan-300">CI/CD automation</span>.
+  </p>
+
+  {/* Technical Strengths */}
+  <p className="text-lg md:text-xl text-gray-200 leading-relaxed mb-6">
+    Experienced in building <span className="italic">cloud-native microservices</span>, 
+    <span className="italic"> event-driven systems with Kafka</span>, and 
+    optimized databases like <span className="text-cyan-300">PostgreSQL</span>, 
+    <span className="text-cyan-300"> MySQL</span>, and 
+    <span className="text-cyan-300"> MongoDB</span>.
+  </p>
+
+  {/* Domain Expertise */}
+  <p className="text-lg md:text-xl text-gray-200 leading-relaxed">
+    Adept at creating <span className="font-semibold text-pink-400">HIPAA-compliant healthcare platforms</span> 
+    and <span className="font-semibold text-purple-400">real-time financial systems</span> 
+    while ensuring performance, compliance, and maintainability.
+  </p>
+</div>
+
       </div>
     </section>
   );

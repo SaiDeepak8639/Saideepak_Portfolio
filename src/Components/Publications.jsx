@@ -1,7 +1,6 @@
-// src/components/Publications.jsx
 import React from "react";
 import profile from "../data/profile";
-import { FaBook } from "react-icons/fa";
+import { FaBookOpen } from "react-icons/fa";
 
 export default function Publications() {
   const publications = [
@@ -20,45 +19,40 @@ export default function Publications() {
   return (
     <section
       id="publications"
-      className="relative px-6 md:px-12 py-20 bg-gradient-to-br from-gray-100 via-white to-gray-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900"
+      className="relative px-6 md:px-12 py-20 bg-gradient-to-br from-indigo-950 via-purple-900 to-blue-900 text-white overflow-hidden"
     >
+      {/* Background Glow */}
+      <div className="absolute -top-20 -left-20 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-0 -right-20 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl"></div>
+
       {/* Title */}
-      <div className="max-w-4xl mx-auto text-center mb-16">
-        <h2 className="text-4xl md:text-5xl font-extrabold flex justify-center items-center gap-3 bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-purple-500">
-          <FaBook className="text-pink-500 drop-shadow-md" /> Publications
+      <div className="max-w-4xl mx-auto text-center mb-16 relative z-10">
+        <h2 className="text-4xl md:text-5xl font-extrabold flex justify-center items-center gap-3 bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
+          <FaBookOpen className="drop-shadow-md" /> Publications
         </h2>
-        <span className="block w-24 h-1 bg-gradient-to-r from-pink-500 to-purple-500 mx-auto mt-4 rounded-full"></span>
+        <span className="block w-24 h-1 bg-gradient-to-r from-cyan-400 to-purple-400 mx-auto mt-4 rounded-full animate-pulse"></span>
       </div>
 
-      {/* Stylish Cards */}
-      <div className="flex flex-col items-center space-y-10">
+      {/* Cards */}
+      <div className="flex flex-col items-center space-y-10 relative z-10">
         {publications.map((pub, index) => (
           <div
             key={index}
             data-aos="fade-up"
-            className="max-w-3xl w-full bg-white/70 dark:bg-gray-800/70 backdrop-blur-xl border border-gray-200 dark:border-gray-700 shadow-xl rounded-2xl p-8 transform hover:scale-[1.02] transition"
+            className="max-w-3xl w-full backdrop-blur-xl bg-white/10 border border-cyan-400/40 shadow-lg rounded-2xl p-8 hover:shadow-cyan-400/40 transition transform hover:scale-[1.02]"
           >
-            {/* Title */}
-            <h3 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-600 mb-3">
+            <h3 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-purple-400 mb-3">
               {pub.title}
             </h3>
-
-            {/* Publisher + Date */}
-            <p className="text-sm italic text-gray-600 dark:text-gray-400 mb-3">
+            <p className="text-sm italic text-gray-300 mb-3">
               Published In: {pub.publisher}, {pub.date}
             </p>
-
-            {/* Description */}
-            <p className="text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
-              {pub.description}
-            </p>
-
-            {/* Link */}
+            <p className="text-gray-200 mb-6 leading-relaxed">{pub.description}</p>
             <a
               href={pub.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block px-5 py-2 rounded-lg bg-gradient-to-r from-blue-500 to-purple-600 text-white font-medium shadow-md hover:shadow-lg hover:opacity-90 transition"
+              className="inline-block px-6 py-2 rounded-lg bg-gradient-to-r from-cyan-400 to-purple-500 text-black font-semibold shadow-md hover:scale-105 transition"
             >
               📎 View on Springer
             </a>

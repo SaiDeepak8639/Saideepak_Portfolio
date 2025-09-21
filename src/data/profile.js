@@ -2,9 +2,9 @@
 const profile = {
   name: "PRANEETH REDDY NAGILLA",
   phone: "+1 (913) 282-1310",
-  email: "nagillapraneeth88@gmail.com",
-  github: "https://github.com/Praneeth340",
-  linkedin: "https://linkedin.com/in/praneeth-nagilla",
+  email: "nag698586@gmail.com",
+  github: "https://github.com/586Praneeth",
+  linkedin: "https://www.linkedin.com/in/praneeth-reddy698586/",
   springer: "https://link.springer.com/chapter/10.1007/978-981-97-0562-7_15",
 };
 

@@ -8,41 +8,44 @@ export default function Skills() {
     {
       title: "Languages",
       items: [
-        { name: "Java 17", icon: <FaJava className="text-orange-600" /> },
-        { name: "Python", icon: <SiPython className="text-blue-500" /> },
-        { name: "TypeScript", icon: <SiTypescript className="text-blue-700" /> },
-        { name: "JavaScript (ES6+)", icon: <FaNodeJs className="text-green-600" /> },
+        { name: "Java 17", icon: <FaJava className="text-red-500" /> },
+        { name: "Python", icon: <SiPython className="text-yellow-400" /> },
+        { name: "TypeScript", icon: <SiTypescript className="text-blue-400" /> },
+        { name: "JavaScript (ES6+)", icon: <FaNodeJs className="text-green-500" /> },
       ],
     },
     {
       title: "Frameworks",
       items: [
-        { name: "Spring Boot", icon: <SiSpringboot className="text-green-500" /> },
-        { name: "React.js", icon: <FaReact className="text-sky-400" /> },
-        { name: "Node.js", icon: <FaNodeJs className="text-green-700" /> },
+        { name: "Spring Boot", icon: <SiSpringboot className="text-green-400" /> },
+        { name: "React.js", icon: <FaReact className="text-cyan-400" /> },
+        { name: "Node.js", icon: <FaNodeJs className="text-lime-500" /> },
       ],
     },
     {
       title: "Databases",
       items: [
-        { name: "PostgreSQL", icon: <SiPostgresql className="text-sky-700" /> },
-        { name: "MongoDB", icon: <SiMongodb className="text-green-500" /> },
-        { name: "MySQL", icon: <FaDatabase className="text-yellow-600" /> },
+        { name: "PostgreSQL", icon: <SiPostgresql className="text-blue-500" /> },
+        { name: "MongoDB", icon: <SiMongodb className="text-green-400" /> },
+        { name: "MySQL", icon: <FaDatabase className="text-orange-400" /> },
       ],
     },
     {
       title: "Cloud & DevOps",
       items: [
-        { name: "AWS", icon: <FaAws className="text-yellow-500" /> },
-        { name: "Docker", icon: <FaDocker className="text-blue-500" /> },
-        { name: "Kubernetes", icon: <SiKubernetes className="text-blue-600" /> },
+        { name: "AWS", icon: <FaAws className="text-yellow-400" /> },
+        { name: "Docker", icon: <FaDocker className="text-sky-400" /> },
+        { name: "Kubernetes", icon: <SiKubernetes className="text-indigo-400" /> },
       ],
     },
   ];
 
   return (
-    <section id="skills" className="bg-black text-white py-16 px-6 md:px-16 lg:px-24">
-      <h2 className="text-3xl font-bold mb-10 text-center text-yellow-400">
+    <section
+      id="skills"
+      className="bg-gradient-to-b from-gray-950 via-purple-950 to-black text-white py-16 px-6 md:px-16 lg:px-24"
+    >
+      <h2 className="text-4xl font-extrabold mb-12 text-center bg-gradient-to-r from-yellow-300 via-pink-400 to-purple-500 text-transparent bg-clip-text">
         ⚡ Skills & Technologies
       </h2>
 
@@ -50,13 +53,13 @@ export default function Skills() {
         {skills.map((category, index) => (
           <div
             key={index}
-            className="bg-gray-900 p-6 rounded-xl shadow-lg hover:shadow-xl transition"
+            className="bg-gradient-to-br from-gray-900 to-gray-800 p-6 rounded-2xl shadow-xl hover:shadow-2xl transition"
             data-aos="fade-up"
           >
-            <h3 className="text-xl font-semibold mb-4 text-pink-400">{category.title}</h3>
+            <h3 className="text-xl font-semibold mb-4 text-cyan-300">{category.title}</h3>
             <ul className="space-y-3">
               {category.items.map((skill, i) => (
-                <li key={i} className="flex items-center gap-3 text-gray-300">
+                <li key={i} className="flex items-center gap-3 text-gray-200 hover:text-white">
                   {skill.icon} <span>{skill.name}</span>
                 </li>
               ))}

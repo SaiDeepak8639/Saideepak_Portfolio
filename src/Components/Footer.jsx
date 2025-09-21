@@ -1,6 +1,6 @@
 // src/components/Footer.jsx
 import React from "react";
-import { FaGithub, FaLinkedin, FaBook, FaCertificate } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaBook, FaCertificate, FaPhone, FaEnvelope } from "react-icons/fa";
 import profile from "../data/profile";
 
 export default function Footer() {
@@ -35,7 +35,7 @@ export default function Footer() {
             <FaBook size={18} />
           </a>
           <a
-            href="/cert.jpg"
+            href={`${import.meta.env.BASE_URL}cert.jpg`}
             target="_blank"
             rel="noopener noreferrer"
             className="w-10 h-10 flex items-center justify-center rounded-full bg-yellow-500 text-white hover:bg-yellow-400 transition"
@@ -46,12 +46,22 @@ export default function Footer() {
 
         {/* Center - Symbol / Logo */}
         <div className="text-2xl font-bold text-yellow-400">
-          PRN
+          PR
         </div>
 
-        {/* Right Side - Copyright */}
-        <div className="text-sm text-gray-400 mt-4 md:mt-0">
-          © {new Date().getFullYear()} Praneeth Reddy Nagilla. All Rights Reserved.
+        {/* Right Side - Contact & Copyright */}
+        <div className="flex flex-col items-center md:items-end text-sm text-gray-400 mt-4 md:mt-0 gap-1">
+          <div className="flex items-center gap-2">
+            <FaPhone size={14} className="text-yellow-400" />
+            <span>+1 (210) 255-3362</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <FaEnvelope size={14} className="text-yellow-400" />
+            <a href="mailto:praneeth@example.com" className="hover:underline">
+              nag69856@gmail.com
+            </a>
+          </div>
+          <div>© {new Date().getFullYear()} Praneeth Reddy Nagilla. All Rights Reserved.</div>
         </div>
       </div>
     </footer>

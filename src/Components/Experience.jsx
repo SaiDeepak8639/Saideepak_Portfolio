@@ -29,7 +29,7 @@ export default function Experience() {
       ],
     },
     {
-      role: "Java Developer",
+      role: "Software Engineer Intern",
       company: "Birlasoft",
       date: "Nov 2017 – July 2018 | Hyderabad, India",
       icon: "📡",

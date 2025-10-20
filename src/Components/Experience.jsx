@@ -9,10 +9,10 @@ export default function Experience() {
       icon: "💻",
       color: "from-cyan-400 to-blue-500",
       tasks: [
-        "Developed React.js portals for claims, onboarding, and prior authorizations.",
-"Built Spring Boot microservices with PostgreSQL and secured via Okta SSO.",
-"Implemented Kafka pipelines and AWS Lambda workflows for async claims processing.",
-"Automated CI/CD with GitHub Actions, CodePipeline, and Terraform on AWS EKS."
+        "Developing C++ and Spring Boot microservices for claims and eligibility workflows on AWS.",
+    "Building React.js portals integrated with secure APIs and PostgreSQL databases.",
+    "Implemented Kafka pipelines and AWS Lambda for asynchronous data processing.",
+    "Automating CI/CD with GitHub Actions, Terraform, and EKS deployments."
       ],
     },
     {
@@ -22,10 +22,10 @@ export default function Experience() {
       icon: "🏦",
       color: "from-green-400 to-emerald-500",
       tasks: [
-       "Modernized loan origination system into Spring Boot microservices on Azure.",
-"Designed REST APIs with OAuth2/JWT and integrated with Loan IQ and nCino.",
-"Built Angular 12 front-end modules for borrower onboarding and KYC.",
-"Deployed apps on AKS with Azure DevOps pipelines and SonarQube integration.",
+        "Developed Java and C++ services for payment authorization and risk validation systems.",
+    "Built Angular dashboards for borrower onboarding and real-time transaction visibility.",
+    "Designed secure REST APIs with OAuth2/JWT for core banking integrations.",
+    "Deployed microservices on Azure AKS using CI/CD pipelines with SonarQube checks."
       ],
     },
     {
@@ -35,10 +35,10 @@ export default function Experience() {
       icon: "📡",
       color: "from-purple-400 to-pink-500",
       tasks: [
-       "Developed Angular 11 UI components for care coordination and lab results.",
-"Built Spring Boot APIs integrated with EHR/EMR systems (Epic, Cerner).",
-"Created Spring Batch jobs and Kafka consumers for claims reconciliation.",
-"Managed CI/CD with Bitbucket, Docker, and Kubernetes deployments."
+       "Developed Spring Boot APIs and Angular UIs for patient care and claim tracking.",
+    "Integrated with EHR/EMR systems (Epic, Cerner) using FHIR/HL7 standards.",
+    "Built Kafka consumers and Spring Batch jobs for claims reconciliation.",
+    "Containerized services with Docker and deployed via Kubernetes pipelines."
       ],
     },
    

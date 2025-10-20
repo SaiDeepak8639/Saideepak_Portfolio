@@ -17,7 +17,7 @@ export default function About() {
           className="flex justify-center transform hover:scale-105 transition duration-500"
         >
           <img
-            src="/Praneeth_Nagilla_Portfolio/developer-illustration.svg"
+            src="/R_Praneeth_Portfolio/developer-illustration.svg"
             alt="Developer Illustration"
             className="w-72 md:w-[26rem] drop-shadow-[0_0_25px_rgba(56,189,248,0.7)] animate-float"
           />
@@ -33,32 +33,37 @@ export default function About() {
     <span className="block w-20 h-1 bg-gradient-to-r from-cyan-400 to-purple-400 mt-3 rounded-full animate-pulse"></span>
   </h2>
 
-  {/* Professional Summary */}
-  <p className="text-lg md:text-xl text-gray-200 leading-relaxed mb-6">
-    Full Stack Developer with <span className="font-semibold text-cyan-300">6 years of experience</span> 
-    delivering secure and scalable applications across 
-    <span className="text-pink-400"> healthcare</span> and 
-    <span className="text-purple-400"> banking</span> domains. Skilled in 
-    <span className="font-semibold text-cyan-300"> Java (11–17), Spring Boot, React, Angular</span>, 
-    with expertise in <span className="text-cyan-300">AWS, Azure, Docker, Kubernetes</span>, 
-    and <span className="text-cyan-300">CI/CD automation</span>.
-  </p>
+{/* Professional Summary */}
+<p className="text-lg md:text-xl text-gray-200 leading-relaxed mb-6">
+  Full Stack Developer with <span className="font-semibold text-cyan-300">6 years of experience</span> 
+  designing and delivering <span className="text-cyan-300">secure, scalable, and high-performance</span> 
+  software across <span className="text-pink-400">healthcare</span> and 
+  <span className="text-purple-400"> fintech</span> domains. Skilled in 
+  <span className="font-semibold text-cyan-300"> C++11/17, Java (Spring Boot), and React</span>, 
+  with hands-on expertise in <span className="text-cyan-300">AWS, Azure, Docker, Kubernetes</span>, 
+  and <span className="text-cyan-300">CI/CD automation</span>.
+</p>
 
-  {/* Technical Strengths */}
-  <p className="text-lg md:text-xl text-gray-200 leading-relaxed mb-6">
-    Experienced in building <span className="italic">cloud-native microservices</span>, 
-    <span className="italic"> event-driven systems with Kafka</span>, and 
-    optimized databases like <span className="text-cyan-300">PostgreSQL</span>, 
-    <span className="text-cyan-300"> MySQL</span>, and 
-    <span className="text-cyan-300"> MongoDB</span>.
-  </p>
+{/* Technical Strengths */}
+<p className="text-lg md:text-xl text-gray-200 leading-relaxed mb-6">
+  Experienced in building <span className="italic">cloud-native microservices</span>, 
+  <span className="italic"> event-driven architectures with Kafka</span>, and 
+  optimizing databases such as <span className="text-cyan-300">PostgreSQL</span>, 
+  <span className="text-cyan-300"> MySQL</span>, and 
+  <span className="text-cyan-300"> MongoDB</span>. Proficient in 
+  <span className="text-cyan-300"> performance tuning</span>, 
+  <span className="text-cyan-300"> system integration</span>, and 
+  <span className="text-cyan-300"> API security</span>.
+</p>
 
-  {/* Domain Expertise */}
-  <p className="text-lg md:text-xl text-gray-200 leading-relaxed">
-    Adept at creating <span className="font-semibold text-pink-400">HIPAA-compliant healthcare platforms</span> 
-    and <span className="font-semibold text-purple-400">real-time financial systems</span> 
-    while ensuring performance, compliance, and maintainability.
-  </p>
+{/* Domain Expertise */}
+<p className="text-lg md:text-xl text-gray-200 leading-relaxed">
+  Adept at developing <span className="font-semibold text-pink-400">HIPAA-compliant healthcare platforms</span> 
+  and <span className="font-semibold text-purple-400">real-time financial systems</span> 
+  while ensuring <span className="text-cyan-300">performance, compliance, and maintainability</span>. 
+  Passionate about bridging <span className="text-cyan-300">system-level precision</span> with 
+  <span className="text-pink-400"> full-stack innovation</span>.
+</p>
 </div>
 
       </div>

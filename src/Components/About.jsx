@@ -59,7 +59,7 @@ export default function About() {
       {/* Signature or Motto */}
       <div className="text-center mt-16">
         <p className="italic text-gray-500">
-          “Technology is best when it connects people and ideas seamlessly.”
+          “Technology is best when it connects people and ideas seamlessly. ”
         </p>
       </div>
     </section>

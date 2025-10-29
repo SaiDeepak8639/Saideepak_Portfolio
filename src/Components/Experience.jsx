@@ -18,7 +18,7 @@ export default function Experience() {
     {
       role: "Software Developer",
       company: "Pajosys Technologies LLC",
-      duration: "Jan 2025 – May 2025 | Arizona, USA",
+      duration: "Jan 2025 – May 2025 | Arizona1, USA",
       icon: <FaLaptopCode className="text-blue-600 text-2xl" />,
       highlights: [
         "Designed and implemented dynamic web interfaces using React.js, Tailwind CSS, and RESTful APIs, ensuring responsive layouts and optimal user experience.",

@@ -76,7 +76,7 @@ export default function Hero() {
             <FaLinkedin />
           </a>
           <a
-            href="https://github.com/8639608041"
+            href="https://github.com/SaiDeepak8639"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-cyan-600 transition"

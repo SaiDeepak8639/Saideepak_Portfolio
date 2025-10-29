@@ -1,46 +1,59 @@
-// src/data/projects.js
 const projects = [
   {
-    title: "Blood Management Portal",
+    title: "Shopping List",
     description:
-      "A full-stack portal for efficient blood donation and management, built with Java and Spring Boot on the backend, integrated with MySQL for secure data handling.",
+      "A simple list management app to add, edit, and delete shopping items with a clean, minimal UI.",
     features: [
-      "Real-time donor-recipient matching and inventory tracking",
-      "Role-based access for donors, hospitals, and admins",
-      "Responsive UI and RESTful APIs for efficient interaction",
+      "Built with pure JavaScript for dynamic DOM updates.",
+      "Local storage integration for persistent data.",
+      "Responsive UI with intuitive design.",
     ],
-    tech: "Java, Spring Boot, MySQL, React, Docker",
-    github: "https://github.com/586Praneeth/blood-Management-Portal",
+    tech: "JavaScript, HTML, CSS",
+    github: "https://github.com/Saideepak/Shopping_List",
     demo: "",
-    image: "blood-management.png",
+    image: "shopping-list.png",
   },
   {
-    title: "Simple Notes App (Dockerized React + Django)",
+    title: "Flixx App",
     description:
-      "A cross-platform notes app built for the TWS community using a full CI/CD-ready stack. Dockerized and deployed with Nginx reverse proxy.",
+      "A movie discovery app fetching data from TMDB API, displaying trending shows and detailed info.",
     features: [
-      "Full-stack app with Django backend and React frontend",
-      "Containerized with Docker and served via Nginx",
-      "Deployed with CI/CD pipelines for smooth updates",
+      "API-based search for movies and series.",
+      "Dynamic routing with React Router.",
+      "Modern responsive design.",
     ],
-    tech: "React, Django, Docker, Nginx",
-    github: "https://github.com/586Praneeth/django-notes-app-main",
+    tech: "React, TMDB API, CSS3",
+    github: "https://github.com/Saideepak/Flixx_App",
     demo: "",
-    image: "notes-app.png",
+    image: "flixx-app.png",
   },
   {
-    title: "Reefer Monitoring System (IoT + Embedded + NavIC)",
+    title: "Expense Tracker",
     description:
-      "A hardware-software system to monitor gas, humidity, and temperature levels in refrigerated containers, based on Springer-published research.",
+      "A personal finance tracker for managing daily expenses and visualizing trends.",
     features: [
-      "Integrated gas (MQ135) and DHT11 sensors with STM32",
-      "Live display via I2C + LCD with UART debugging",
-      "NavIC integration for real-time tracking",
+      "React Hooks for state management.",
+      "Local storage persistence.",
+      "Chart.js for expense visualization.",
     ],
-    tech: "Embedded C, STM32, IoT, NavIC",
-    github: "https://github.com/586Praneeth/reefer-Monitoring-system",
+    tech: "React, JavaScript, Chart.js",
+    github: "https://github.com/Saideepak/Expense_tracker_react",
     demo: "",
-    image: "reefer-system.png",
+    image: "expense-tracker.png",
+  },
+  {
+    title: "Clerk Auth Next.js App",
+    description:
+      "An authentication demo app integrating Clerk with Next.js and Tailwind CSS.",
+    features: [
+      "Clerk authentication with email verification.",
+      "Responsive pages and protected routes.",
+      "Modern UI with Tailwind CSS.",
+    ],
+    tech: "Next.js, Clerk, Tailwind CSS",
+    github: "https://github.com/Saideepak/Clerk_Next.js-App",
+    demo: "",
+    image: "clerk-nextjs.png",
   },
 ];
 

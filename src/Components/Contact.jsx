@@ -1,82 +1,80 @@
-// src/components/Contact.jsx
 import React from "react";
+import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 import emailjs from "@emailjs/browser";
 
 export default function Contact() {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    emailjs
+    .sendForm(
+    "service_p5gdnxs",       // ✅ Your EmailJS Service ID
+    "template_oc9vguh",      // ✅ Your EmailJS Template ID
+    e.target,                // ✅ The form element
+    "jGnO20a1YF_QB-ERw" 
+      )
+      .then(
+        () => alert("✅ Message sent successfully!"),
+        () => alert("❌ Failed to send. Try again later.")
+      );
+
+    e.target.reset();
+  };
+
   return (
     <section
       id="contact"
-      className="py-12 bg-gradient-to-br from-indigo-950 via-purple-900 to-blue-900 text-white"
+      className="py-24 px-6 md:px-20 bg-gradient-to-b from-cyan-50 via-white to-blue-100 text-gray-800"
     >
-      <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-8 px-4 md:px-8 items-center">
-        
-        {/* Left Side - Contact Form */}
-        <div className="bg-white/10 backdrop-blur-xl p-6 rounded-2xl shadow-xl border border-purple-400/30">
-          <h2 className="text-xl md:text-2xl font-bold mb-4 text-cyan-300">
-            Send Me a Message
-          </h2>
+      <div className="text-center mb-16">
+        <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900">
+          Get In <span className="text-cyan-600">Touch</span>
+        </h2>
+        <p className="text-gray-600 mt-2">
+          Feel free to drop a message or connect via social links below.
+        </p>
+      </div>
 
-          <form
-            id="contact-form"
-            className="space-y-3"
-            onSubmit={(e) => {
-              e.preventDefault();
-
-              emailjs
-                .sendForm(
-                  "service_b1m8jsc",
-                  "template_mjpq5eu",
-                  e.target,
-                  "AFmtGuVOOTsDnSVON"
-                )
-                .then(
-                  () => alert("✅ Message sent successfully!"),
-                  () => alert("❌ Failed to send message. Try again.")
-                );
-
-              e.target.reset();
-            }}
-          >
+      {/* Contact form */}
+      <div className="max-w-4xl mx-auto bg-white/80 backdrop-blur-md border border-cyan-100 rounded-2xl shadow-xl p-8 md:p-12">
+        <form onSubmit={handleSubmit} className="space-y-5">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
             <input
               type="text"
               name="from_name"
               placeholder="Your Name"
-              className="w-full p-2 rounded-md text-black focus:ring-2 focus:ring-cyan-400 outline-none"
               required
+              className="p-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-cyan-400 outline-none w-full"
             />
             <input
               type="email"
               name="from_email"
               placeholder="Your Email"
-              className="w-full p-2 rounded-md text-black focus:ring-2 focus:ring-cyan-400 outline-none"
               required
+              className="p-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-cyan-400 outline-none w-full"
             />
-            <textarea
-              name="message"
-              placeholder="Your Message"
-              rows="4"
-              className="w-full p-2 rounded-md text-black focus:ring-2 focus:ring-cyan-400 outline-none"
-              required
-            ></textarea>
+          </div>
 
-            <button
-              type="submit"
-              className="w-full bg-gradient-to-r from-cyan-400 to-purple-500 text-black px-4 py-2 rounded-lg font-semibold hover:opacity-90 transition"
-            >
-              🚀 Send Message
-            </button>
-          </form>
-        </div>
+          <textarea
+            name="message"
+            placeholder="Your Message..."
+            rows="5"
+            required
+            className="w-full p-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-cyan-400 outline-none"
+          ></textarea>
 
-        {/* Right Side - Image */}
-        <div className="flex justify-center md:justify-end">
-          <img
-            src={`${import.meta.env.BASE_URL}contact.jpg`}
-            alt="Contact Illustration"
-            className="rounded-2xl shadow-2xl w-56 h-56 md:w-72 md:h-72 object-cover border-4 border-cyan-400"
-          />
-        </div>
+          <button
+            type="submit"
+            className="px-8 py-3 rounded-lg bg-cyan-600 text-white font-semibold hover:bg-cyan-700 transition shadow-md"
+          >
+            Send Message
+          </button>
+        </form>
       </div>
+
+     
+
+    
     </section>
   );
 }

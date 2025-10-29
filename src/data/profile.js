@@ -1,11 +1,10 @@
-// src/data/profile.js
 const profile = {
-  name: "PRANEETH REDDY NAGILLA",
-  phone: "+1 (913) 282-1310",
-  email: "nag698586@gmail.com",
-  github: "https://github.com/586Praneeth",
-  linkedin: "https://www.linkedin.com/in/praneeth-reddy698586/",
-  springer: "https://link.springer.com/chapter/10.1007/978-981-97-0562-7_15",
+  name: "SAIDEEPAK AKKINAPALLI",
+  phone: "+1 (913) 349-1756",
+  email: "saideepak.akkinapalli62@gmail.com",
+  github: "https://github.com/8639608041",
+  linkedin: "https://www.linkedin.com/in/saideepak-akkinapalli-269658211/",
+  springer: "", // leave blank or add publication link if any
 };
 
 export default profile;

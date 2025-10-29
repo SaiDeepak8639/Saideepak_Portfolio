@@ -1,89 +1,62 @@
-// src/components/Navbar.jsx
-import React, { useState, useEffect } from "react";
-import { FaBars, FaTimes } from "react-icons/fa";
-import { BsSun, BsMoon } from "react-icons/bs";
+import React, { useState } from "react";
+import { FaHome, FaUserGraduate, FaLaptopCode, FaTools, FaProjectDiagram, FaEnvelope } from "react-icons/fa";
+import { GiBrain } from "react-icons/gi";
+import { HiMenuAlt3, HiX } from "react-icons/hi";
 
 export default function Navbar() {
-  const [theme, setTheme] = useState("light");
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [open, setOpen] = useState(false);
 
-  useEffect(() => {
-    if (theme === "dark") {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
-  }, [theme]);
+  const links = [
+    { name: "Home", href: "#home", icon: <FaHome /> },
+    { name: "About", href: "#about", icon: <GiBrain /> },
+    { name: "Education", href: "#education", icon: <FaUserGraduate /> },
+    { name: "Experience", href: "#experience", icon: <FaLaptopCode /> },
+    { name: "Skills", href: "#skills", icon: <FaTools /> },
+    { name: "Projects", href: "#projects", icon: <FaProjectDiagram /> },
+    { name: "Contact", href: "#contact", icon: <FaEnvelope /> },
+  ];
 
   return (
-    <nav className="backdrop-blur-md bg-white/10 dark:bg-black/20 border-b border-cyan-400/30 sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
-        {/* Logo */}
-        <h1 className="text-2xl font-extrabold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 text-transparent bg-clip-text drop-shadow-[0_0_12px_rgba(56,189,248,0.8)]">
-          PR
-        </h1>
-
-        {/* Desktop Nav links */}
-        <div className="hidden md:flex gap-8 text-sm md:text-base">
-          {[
-            "Home",
-            "Education",
-            "Experience",
-            "Skills",
-            "Projects",
-            "Publications",
-            "Contact",
-          ].map((item) => (
-            <a
-              key={item}
-              href={`#${item.toLowerCase()}`}
-              className="relative text-cyan-400 hover:text-purple-400 transition group"
-            >
-              {item}
-              <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-gradient-to-r from-cyan-400 to-pink-500 group-hover:w-full transition-all duration-300"></span>
-            </a>
-          ))}
-        </div>
-
-        {/* Theme toggle + Mobile menu button */}
-        <div className="flex items-center gap-4">
-         
-
-          {/* Hamburger menu (mobile) */}
-          <button
-            className="md:hidden text-2xl text-cyan-300"
-            onClick={() => setMenuOpen(!menuOpen)}
-          >
-            {menuOpen ? <FaTimes /> : <FaBars />}
-          </button>
-        </div>
+    <nav className="fixed top-0 left-0 h-full w-20 md:w-60 bg-white/70 backdrop-blur-lg border-r border-gray-200 shadow-xl flex flex-col justify-between z-50">
+      {/* Logo Section */}
+      <div className="flex items-center justify-center md:justify-start gap-2 px-4 py-6 border-b border-gray-300">
+        <h1 className="text-2xl font-extrabold text-cyan-600 tracking-widest">SD</h1>
+        <span className="hidden md:block text-gray-600 font-semibold">Deepak</span>
       </div>
 
-      {/* Mobile Menu Overlay */}
-      {menuOpen && (
-        <div className="fixed inset-0 bg-gradient-to-br from-indigo-950 via-purple-900 to-blue-900 flex flex-col items-center justify-center space-y-10 text-2xl font-semibold z-50 animate-fadeIn">
-          <button
-            className="absolute top-6 right-6 text-3xl text-cyan-300"
-            onClick={() => setMenuOpen(false)}
+      {/* Navigation Links */}
+      <div className="flex-1 flex flex-col items-center md:items-start mt-8 space-y-6">
+        {links.map((link, i) => (
+          <a
+            key={i}
+            href={link.href}
+            className="flex items-center gap-3 text-gray-700 hover:text-cyan-600 transition-all group text-sm md:text-base font-medium"
           >
-            <FaTimes />
-          </button>
-          {[
-            "Home",
-            "Education",
-            "Experience",
-            "Skills",
-            "Projects",
-            "Publications",
-            "Contact",
-          ].map((item) => (
+            <span className="text-lg group-hover:scale-110 transition-transform">{link.icon}</span>
+            <span className="hidden md:block">{link.name}</span>
+          </a>
+        ))}
+      </div>
+
+      {/* Mobile Toggle */}
+      <button
+        className="absolute top-5 right-5 text-gray-700 md:hidden"
+        onClick={() => setOpen(!open)}
+      >
+        {open ? <HiX size={28} /> : <HiMenuAlt3 size={28} />}
+      </button>
+
+      {/* Collapsible Overlay for Mobile */}
+      {open && (
+        <div className="fixed inset-0 bg-white/90 backdrop-blur-md flex flex-col items-center justify-center space-y-8 md:hidden z-50">
+          {links.map((link, i) => (
             <a
-              key={item}
-              href={`#${item.toLowerCase()}`}
-              onClick={() => setMenuOpen(false)}
-              className="text-cyan-300 hover:text-purple-300 transition transform hover:scale-110"
+              key={i}
+              href={link.href}
+              onClick={() => setOpen(false)}
+              className="text-xl font-semibold text-gray-800 hover:text-cyan-600 transition"
             >
-              {item}
+              {link.name}
             </a>
           ))}
         </div>

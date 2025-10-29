@@ -1,101 +1,88 @@
 import React from "react";
+import { FaCode, FaServer, FaLaptopCode } from "react-icons/fa";
 
 export default function Experience() {
-  const experienceData = [
+  const experiences = [
     {
-      role: "Full Stack Developer",
-      company: "Centene Corporation",
-      date: "Jan 2025 – Present | Saint Louis, MO",
-      icon: "💻",
-      color: "from-cyan-400 to-blue-500",
-      tasks: [
-        "Developing C++ and Spring Boot microservices for claims and eligibility workflows on AWS.",
-    "Building React.js portals integrated with secure APIs and PostgreSQL databases.",
-    "Implemented Kafka pipelines and AWS Lambda for asynchronous data processing.",
-    "Automating CI/CD with GitHub Actions, Terraform, and EKS deployments."
+      role: "Software Engineer",
+      company: "Humana",
+      duration: "July 2025 – Present | Remote, USA",
+      icon: <FaCode className="text-cyan-600 text-2xl" />,
+      highlights: [
+        "Developed predictive analytics system using FastAPI, TensorFlow, and AWS.",
+        "Architected microservices with Kubernetes and asynchronous data processing.",
+        "Automated model deployments via Docker, Terraform, and GitHub Actions.",
+        "Collaborated with data scientists and DevOps teams for HIPAA-compliant workflows.",
       ],
     },
     {
-      role: "Java Full Stack Developer",
-      company: "TCS",
-      date: "Jan 2020 – July 2023 | Hyderabad, India",
-      icon: "🏦",
-      color: "from-green-400 to-emerald-500",
-      tasks: [
-        "Developed Java and C++ services for payment authorization and risk validation systems.",
-    "Built Angular dashboards for borrower onboarding and real-time transaction visibility.",
-    "Designed secure REST APIs with OAuth2/JWT for core banking integrations.",
-    "Deployed microservices on Azure AKS using CI/CD pipelines with SonarQube checks."
+      role: "Software Developer Intern",
+      company: "Pajosys Technologies LLC",
+      duration: "Jan 2025 – May 2025 | Missouri, USA",
+      icon: <FaLaptopCode className="text-blue-600 text-2xl" />,
+      highlights: [
+        "Designed responsive React.js interfaces using Tailwind CSS and REST APIs.",
+        "Optimized UI rendering and implemented Jest/Mocha unit testing.",
+        "Collaborated with backend teams to refine data flows and API performance.",
       ],
     },
     {
-      role: "Software Engineer Intern",
-      company: "Birlasoft",
-      date: "Nov 2017 – July 2018 | Hyderabad, India",
-      icon: "📡",
-      color: "from-purple-400 to-pink-500",
-      tasks: [
-       "Developed Spring Boot APIs and Angular UIs for patient care and claim tracking.",
-    "Integrated with EHR/EMR systems (Epic, Cerner) using FHIR/HL7 standards.",
-    "Built Kafka consumers and Spring Batch jobs for claims reconciliation.",
-    "Containerized services with Docker and deployed via Kubernetes pipelines."
+      role: "Software Engineer",
+      company: "Trigent",
+      duration: "Nov 2020 – July 2023 | Hyderabad, India",
+      icon: <FaServer className="text-indigo-600 text-2xl" />,
+      highlights: [
+        "Modernized monolithic apps to microservices using Spring Boot and Angular.",
+        "Developed REST APIs and message queues (RabbitMQ, Kafka).",
+        "Configured CI/CD via Jenkins and Azure DevOps for global deployments.",
+        "Led migration of enterprise workloads to AWS and Azure.",
       ],
     },
-   
   ];
 
   return (
     <section
       id="experience"
-      className="relative px-6 md:px-12 py-20 bg-gradient-to-b from-gray-950 via-purple-950 to-blue-900 text-white"
+      className="py-24 px-6 md:px-20 bg-gradient-to-b from-cyan-50 via-white to-blue-100 text-gray-800"
     >
-      {/* Title */}
       <div className="text-center mb-16">
-        <h2 className="text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-green-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
-          Experience
+        <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900">
+          Professional <span className="text-cyan-600">Experience</span>
         </h2>
-        <p className="text-gray-400 mt-3">My career growth and milestones</p>
+        <p className="text-gray-600 mt-2">Roles and responsibilities through my software journey</p>
       </div>
 
-      {/* Timeline Vertical Style */}
-      <div className="relative max-w-3xl mx-auto">
-        {/* Vertical line */}
-        <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gradient-to-b from-green-400 via-blue-500 to-purple-500"></div>
+      {/* Timeline container */}
+      <div className="relative max-w-6xl mx-auto">
+        {/* Line */}
+        <div className="hidden md:block absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 rounded-full"></div>
 
-        {experienceData.map((exp, i) => (
-          <div
-            key={i}
-            className={`mb-16 flex ${
-              i % 2 === 0 ? "justify-start" : "justify-end"
-            } relative`}
-          >
-            {/* Connector Dot */}
+        {/* Experience Cards */}
+        <div className="flex flex-col md:flex-row items-center justify-between gap-10 md:gap-6">
+          {experiences.map((exp, i) => (
             <div
-              className={`absolute left-1/2 transform -translate-x-1/2 w-12 h-12 rounded-full flex items-center justify-center bg-gradient-to-r ${exp.color} shadow-xl`}
-            >
-              <span className="text-2xl">{exp.icon}</span>
-            </div>
-
-            {/* Card */}
-            <div
-              className={`w-[45%] p-6 rounded-2xl bg-white/10 backdrop-blur-lg border border-white/20 shadow-xl ${
-                i % 2 === 0 ? "ml-16 text-left" : "mr-16 text-right"
+              key={i}
+              className={`relative w-full md:w-[32%] bg-white p-8 rounded-2xl shadow-lg border border-cyan-100 hover:shadow-2xl transition-all duration-300 ${
+                i % 2 === 0 ? "md:translate-y-6" : "md:-translate-y-6"
               }`}
             >
-              <h3 className="text-xl font-bold text-cyan-300">{exp.role}</h3>
-              <p className="text-sm text-gray-400 mb-3">
-                {exp.company} | {exp.date}
-              </p>
-              <ul className="list-disc list-inside text-gray-300 text-sm space-y-1">
-                {exp.tasks.map((task, idx) => (
-                  <li key={idx}>{task}</li>
+              {/* Ribbon bar */}
+              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-t-2xl"></div>
+
+              <div className="flex items-center justify-center mb-4">{exp.icon}</div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-1">{exp.role}</h3>
+              <p className="text-sm font-medium text-gray-500 mb-3">{exp.company}</p>
+              <p className="text-xs text-gray-500 mb-4">{exp.duration}</p>
+
+              <ul className="text-gray-600 text-sm space-y-2 list-disc list-inside">
+                {exp.highlights.map((point, idx) => (
+                  <li key={idx}>{point}</li>
                 ))}
               </ul>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   );
 }
-

@@ -1,71 +1,66 @@
 import React from "react";
+import { FaBrain, FaCloud, FaCogs, FaRobot } from "react-icons/fa";
 
 export default function About() {
+  const highlights = [
+    {
+      icon: <FaBrain className="text-cyan-600 text-3xl" />,
+      title: "Innovative Thinker",
+      text: "Passionate about solving complex problems with creative, data-driven software solutions that scale globally."
+    },
+    {
+      icon: <FaCloud className="text-blue-500 text-3xl" />,
+      title: "Cloud Expertise",
+      text: "Hands-on experience with AWS, Azure, and Kubernetes for building secure, containerized, and cloud-native applications."
+    },
+    {
+      icon: <FaCogs className="text-teal-500 text-3xl" />,
+      title: "Full-Stack Builder",
+      text: "Comfortable across front-end and back-end technologies — from React & Angular to Java Spring Boot & FastAPI."
+    },
+    {
+      icon: <FaRobot className="text-indigo-500 text-3xl" />,
+      title: "AI Enthusiast",
+      text: "Integrating ML models using TensorFlow, PyTorch, and FastAPI to deliver intelligent, automation-ready solutions."
+    }
+  ];
+
   return (
     <section
       id="about"
-      className="relative px-6 md:px-12 py-24 bg-gradient-to-br from-indigo-950 via-purple-900 to-blue-900 text-white overflow-hidden"
+      className="py-24 px-8 md:px-20 bg-gradient-to-b from-cyan-50 via-white to-blue-100 text-gray-800"
     >
-      {/* Background Glow */}
-      <div className="absolute -top-24 -left-24 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl"></div>
-      <div className="absolute -bottom-32 -right-32 w-[28rem] h-[28rem] bg-purple-600/20 rounded-full blur-3xl"></div>
+      <div className="max-w-6xl mx-auto text-center mb-16">
+        <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">
+          About <span className="text-cyan-600">Me</span>
+        </h2>
+        <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          I’m a software engineer driven by curiosity and precision — building modern,
+          scalable systems that blend AI, cloud, and full-stack technologies into seamless digital experiences.
+        </p>
+      </div>
 
-      <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center relative z-10">
-        {/* Illustration */}
-        <div
-          data-aos="fade-right"
-          className="flex justify-center transform hover:scale-105 transition duration-500"
-        >
-          <img
-            src="/R_Praneeth_Portfolio/developer-illustration.svg"
-            alt="Developer Illustration"
-            className="w-72 md:w-[26rem] drop-shadow-[0_0_25px_rgba(56,189,248,0.7)] animate-float"
-          />
-        </div>
+      {/* Info Cards */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+        {highlights.map((item, idx) => (
+          <div
+            key={idx}
+            className="p-8 bg-white rounded-2xl shadow-lg hover:shadow-2xl border border-cyan-100 transform hover:-translate-y-2 transition-all duration-300"
+          >
+            <div className="mb-4 flex justify-center">{item.icon}</div>
+            <h3 className="text-xl font-semibold text-gray-800 mb-2">
+              {item.title}
+            </h3>
+            <p className="text-gray-600 text-sm leading-relaxed">{item.text}</p>
+          </div>
+        ))}
+      </div>
 
-     {/* Text Content */}
-<div
-  data-aos="fade-left"
-  className="backdrop-blur-xl bg-white/10 border border-cyan-400/30 shadow-2xl rounded-3xl p-10"
->
-  <h2 className="text-4xl md:text-5xl font-extrabold text-cyan-300 mb-6">
-    About Me
-    <span className="block w-20 h-1 bg-gradient-to-r from-cyan-400 to-purple-400 mt-3 rounded-full animate-pulse"></span>
-  </h2>
-
-{/* Professional Summary */}
-<p className="text-lg md:text-xl text-gray-200 leading-relaxed mb-6">
-  Full Stack Developer with <span className="font-semibold text-cyan-300">6 years of experience</span> 
-  designing and delivering <span className="text-cyan-300">secure, scalable, and high-performance</span> 
-  software across <span className="text-pink-400">healthcare</span> and 
-  <span className="text-purple-400"> fintech</span> domains. Skilled in 
-  <span className="font-semibold text-cyan-300"> C++11/17, Java (Spring Boot), and React</span>, 
-  with hands-on expertise in <span className="text-cyan-300">AWS, Azure, Docker, Kubernetes</span>, 
-  and <span className="text-cyan-300">CI/CD automation</span>.
-</p>
-
-{/* Technical Strengths */}
-<p className="text-lg md:text-xl text-gray-200 leading-relaxed mb-6">
-  Experienced in building <span className="italic">cloud-native microservices</span>, 
-  <span className="italic"> event-driven architectures with Kafka</span>, and 
-  optimizing databases such as <span className="text-cyan-300">PostgreSQL</span>, 
-  <span className="text-cyan-300"> MySQL</span>, and 
-  <span className="text-cyan-300"> MongoDB</span>. Proficient in 
-  <span className="text-cyan-300"> performance tuning</span>, 
-  <span className="text-cyan-300"> system integration</span>, and 
-  <span className="text-cyan-300"> API security</span>.
-</p>
-
-{/* Domain Expertise */}
-<p className="text-lg md:text-xl text-gray-200 leading-relaxed">
-  Adept at developing <span className="font-semibold text-pink-400">HIPAA-compliant healthcare platforms</span> 
-  and <span className="font-semibold text-purple-400">real-time financial systems</span> 
-  while ensuring <span className="text-cyan-300">performance, compliance, and maintainability</span>. 
-  Passionate about bridging <span className="text-cyan-300">system-level precision</span> with 
-  <span className="text-pink-400"> full-stack innovation</span>.
-</p>
-</div>
-
+      {/* Signature or Motto */}
+      <div className="text-center mt-16">
+        <p className="italic text-gray-500">
+          “Technology is best when it connects people and ideas seamlessly.”
+        </p>
       </div>
     </section>
   );

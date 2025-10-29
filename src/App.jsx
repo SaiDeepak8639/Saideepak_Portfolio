@@ -12,7 +12,6 @@ import Education from "./Components/Education";
 import Experience from "./Components/Experience";
 import Skills from "./Components/Skills";
 import Projects from "./Components/Projects";
-import Publications from "./Components/Publications";
 import Contact from "./Components/Contact";
 import Footer from "./Components/Footer";
 
@@ -25,19 +24,21 @@ function App() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-900 to-blue-900 text-white font-[Poppins]">
+    <div className="flex font-[Poppins] bg-gradient-to-b from-white via-cyan-50 to-blue-100 text-gray-800">
+      {/* Fixed sidebar navigation */}
       <Navbar />
-      <main>
+
+      {/* Main content area */}
+      <main className="flex-1 ml-20 md:ml-60">
         <Hero />
         <About />
         <Education />
         <Experience />
         <Skills />
         <Projects />
-        <Publications />
         <Contact />
+        <Footer />
       </main>
-      <Footer />
     </div>
   );
 }

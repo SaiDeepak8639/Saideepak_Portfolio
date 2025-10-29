@@ -1,71 +1,67 @@
 import React from "react";
+import { FaUniversity, FaLaptopCode, FaGraduationCap } from "react-icons/fa";
 
 export default function Education() {
-  const educationData = [
+  const education = [
     {
-      year: "2024",
-      title: "Masters in Computer Science",
-      institution: "University of Central Missouri",
-      icon: "🎓",
+      year: "2025",
+      degree: "Master of Science in Computer Science",
+      school: "University of Central Missouri, USA",
+      icon: <FaGraduationCap className="text-cyan-600 text-3xl" />,
       color: "from-cyan-400 to-blue-500",
     },
     {
-      year: "2021",
-      title: "Bachelor of Engineering in Electronics & Communication",
-      institution: "Chaitanya Bharathi Institute of Technology",
-      icon: "📡",
-      color: "from-purple-400 to-pink-500",
+      year: "2022",
+      degree: "Bachelor of Engineering in Computer Science",
+      school: "Malla Reddy Engineering College, India",
+      icon: <FaUniversity className="text-blue-600 text-3xl" />,
+      color: "from-blue-400 to-purple-400",
     },
-    {
-      year: "2017",
-      title: "Diploma in Communication Engineering",
-      institution: "Government Institute of Electronics",
-      icon: "💻",
-      color: "from-pink-400 to-red-500",
-    },
+   
   ];
 
   return (
     <section
       id="education"
-      className="relative px-6 md:px-12 py-24 bg-gradient-to-br from-indigo-950 via-purple-900 to-blue-900 text-white"
+      className="py-24 px-6 md:px-20 bg-gradient-to-b from-white via-cyan-50 to-blue-100 text-gray-800"
     >
-      {/* Title */}
       <div className="text-center mb-16">
-        <h2 className="text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 text-transparent bg-clip-text">
-          Education
+        <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900">
+          Education <span className="text-cyan-600">& Journey</span>
         </h2>
-        <p className="mt-3 text-gray-300">
-          My academic journey through technology & engineering
+        <p className="text-gray-600 mt-2">
+          My academic path that shaped my software and analytical foundation.
         </p>
       </div>
 
-      {/* Horizontal Timeline */}
-      <div className="relative max-w-6xl mx-auto">
-        {/* Timeline Line */}
-        <div className="absolute top-1/2 left-0 w-full h-1 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 rounded-full"></div>
+      {/* Horizontal timeline */}
+      <div className="flex flex-col lg:flex-row items-center justify-center gap-10 lg:gap-8 max-w-6xl mx-auto">
+        {education.map((edu, index) => (
+          <div
+            key={index}
+            className="relative w-full lg:w-1/3 bg-white rounded-2xl p-8 shadow-lg border border-cyan-100 hover:shadow-2xl transition-all duration-300"
+          >
+            {/* Ribbon on top */}
+            <div
+              className={`absolute -top-3 left-6 right-6 h-1 rounded-full bg-gradient-to-r ${edu.color}`}
+            ></div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 relative z-10">
-          {educationData.map((edu, index) => (
-            <div key={index} className="flex flex-col items-center text-center relative">
-              {/* Dot */}
-              <div
-                className={`w-16 h-16 flex items-center justify-center rounded-full bg-gradient-to-r ${edu.color} text-black font-bold shadow-lg mb-6`}
-              >
-                <span className="text-2xl">{edu.icon}</span>
-              </div>
-
-              {/* Card */}
-              <div className="bg-white/10 backdrop-blur-xl border border-white/20 p-6 rounded-2xl shadow-lg hover:scale-105 transition transform">
-                <h3 className="text-lg md:text-xl font-semibold text-cyan-300">
-                  {edu.title}
-                </h3>
-                <p className="text-gray-300 text-sm">{edu.institution}</p>
-              </div>
+            <div className="flex flex-col items-center text-center space-y-3">
+              {edu.icon}
+              <h3 className="text-lg md:text-xl font-semibold text-gray-900 mt-2">
+                {edu.degree}
+              </h3>
+              <p className="text-sm text-gray-500">{edu.school}</p>
+              <span className="inline-block mt-2 px-3 py-1 text-sm bg-cyan-100 text-cyan-700 font-medium rounded-full shadow-sm">
+                {edu.year}
+              </span>
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
+
+      {/* Connector line for large screens */}
+      <div className="hidden lg:block w-[70%] mx-auto h-[2px] bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 mt-16 rounded-full"></div>
     </section>
   );
 }
